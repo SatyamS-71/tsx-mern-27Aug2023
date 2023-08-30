@@ -13,7 +13,7 @@ Completed By Satyam Singh
 
 ✅- We should also fetch information about the person’s homeworld and display its name, terrain, climate, and amount of residents.
 
-✅- Adder filter functionality. 
+✅- Added filter functionality. 
 
  Sample video can be found in this repo as 'Sample_Video.mp4'.
  
