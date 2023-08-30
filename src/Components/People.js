@@ -20,7 +20,8 @@ const People = () => {
       const response = await fetch(`${api.People}/?search=${inputSearch}`);
       const returnedData = await response.json();
       setCharacters(returnedData.results);
-    } catch {
+    } catch(error) {
+      console.log('Error while fetching data in Seach bar' , error);
     } finally {
       setLoading(false);
     }
@@ -43,6 +44,7 @@ const People = () => {
         console.error("Error fetching data:", error);
       });
   }, [page]);
+
   useEffect(() => {
     setLoading(true);
     getFilteredData();
@@ -101,8 +103,6 @@ const People = () => {
               style={{
                 marginLeft: "-12px",
                 marginBottom: "5rem",
-                padding: "",
-                colorBorder: "",
               }}
             />
           </Col>

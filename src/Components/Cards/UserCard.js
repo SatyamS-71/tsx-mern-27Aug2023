@@ -1,20 +1,17 @@
 import {
   Modal,
-  Button,
-  Card,
   ConfigProvider,
   Row,
   Col,
   Divider,
-  Collapse,
 } from "antd";
 import "../../styles.css";
-const { Meta } = Card;
+
 
 
 import HomeworldCard from '../Cards/HomeworldCard'
 import moment from "moment";
-import { useEffect, useState } from "react";
+
 
 const Cardcolors = [
   "#ff00ff",
@@ -55,12 +52,11 @@ const Cardcolors = [
   "#cc33ff",
   "#3399ff",
 ];
+
+
 const UserCard = ({ charData }) => {
   const splitedUrl = charData.url.split("/");
   const characterId = splitedUrl[splitedUrl.length - 2];
-
-  const [Homeworldstatus, setHomeworldStatus] = useState(true);
-  const [fetchHomeworld, setFetchHomeworld] = useState(false);
 
   const colorofthecard =
     charData.species.length != 0
@@ -69,10 +65,6 @@ const UserCard = ({ charData }) => {
         }`
       : ``;
 
-  const DrawerClick = (e) => {
-    setFetchHomeworld(true);
-    console.log(e);
-  };
 
   const info = () => {
     Modal.info({
@@ -81,8 +73,6 @@ const UserCard = ({ charData }) => {
       content: (
         <div className="" style={{ width: "", height: "75vh" }}>
           <Divider type="horizontal" />
-
-          {/* {Drawer} */}
           <Row>
             <Col span={18}>
               <h2> Height </h2>
