@@ -1,7 +1,6 @@
-import { useState } from "react";
 import People from "../People";
 import { Layout, Menu } from "antd";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const { Header, Content, Footer } = Layout;
 import logo from '../../Utilities/animations/images/logo.svg';
 
@@ -69,6 +68,7 @@ const AppLayout = () => {
             <Route path="/" Component={People}></Route>
             <Route path="/species" element={<div> Species </div>}></Route>
             <Route path="/planet" element={<div> Planets </div>}></Route>
+            <Route path = "/Starships" element={<div> Starships</div>}> </Route>
           </Routes>
         </BrowserRouter>
         </Content>
